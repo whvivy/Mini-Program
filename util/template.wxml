@@ -1,0 +1,29 @@
+<template name="obj">
+  <view class='temp'>
+     <image src = "{{item.image}}"></image> 
+    <view class='font'>
+      <text class='brand'>{{item.brand}}</text>
+      <text class='name'>{{item.name}}</text>
+      <text class='price'>{{item.price}}</text>
+      <text class='off'>{{item.priceOff}} </text>
+    </view>
+    <view class='triangle-right'></view>
+  </view>
+</template>
+<template name="special">
+  <view >
+      <image src='{{item.cover[0].url_small}}' class='cover'></image>
+    </view>
+  <scroll-view class="scroll-view_H" scroll-x >
+    <block wx:for="{{item.sku}}" wx:for-item="i">
+        <view wx:if="{{i.images[0].url_small.length > 0}}" class='scroll-view-item_H'>
+          <view class='show '>
+            <image src="{{i.images[0].url_small}}" class="image-lists"  />
+            <view class='show-name'>{{i.name}}</view>
+            <text class='show-price'>{{i.price2.value_display}}</text>
+            <text class='show-off'>{{i.price2.price_off_text}}</text>  
+          </view>  
+        </view>
+       </block>
+  </scroll-view>
+</template>
