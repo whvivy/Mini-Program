@@ -113,78 +113,12 @@ Page(util._obj({
             lists.sku = item.sku
             rel.push(lists)
           })
-          switch(length){
-            case 6 :
-              this.setData({
-                'specialList[6]': rel[0],
-                'specialList[7]': rel[1],
-                'specialList[8]': rel[2],
-                'specialList[9]': rel[3],
-                'specialList[10]': rel[4],
-                'specialList[11]': rel[5]
-              })
-              break;
-            case 12:
-              this.setData({
-                'specialList[12]': rel[0],
-                'specialList[13]': rel[1],
-                'specialList[14]': rel[2],
-                'specialList[15]': rel[3],
-                'specialList[16]': rel[4],
-                'specialList[17]': rel[5]
-              })
-              break;
-            case 18:
-              this.setData({
-                'specialList[18]': rel[0],
-                'specialList[19]': rel[1],
-                'specialList[20]': rel[2],
-                'specialList[21]': rel[3],
-                'specialList[22]': rel[4],
-                'specialList[23]': rel[5]
-              })
-              break;
-            case 24:
-              this.setData({
-                'specialList[24]': rel[0],
-                'specialList[25]': rel[1],
-                'specialList[26]': rel[2],
-                'specialList[27]': rel[3],
-                'specialList[28]': rel[4],
-                'specialList[29]': rel[5]
-              })
-              break;
-            case 30:
-              this.setData({
-                'specialList[30]': rel[0],
-                'specialList[31]': rel[1],
-                'specialList[32]': rel[2],
-                'specialList[33]': rel[3],
-                'specialList[34]': rel[4],
-                'specialList[35]': rel[5]
-              })
-              break;
-            case 36:
-              this.setData({
-                'specialList[36]': rel[0],
-                'specialList[37]': rel[1],
-                'specialList[38]': rel[2],
-                'specialList[39]': rel[3],
-                'specialList[40]': rel[4],
-                'specialList[41]': rel[5]
-              })
-              break;
-            case 42:
-              this.setData({
-                'specialList[42]': rel[0],
-                'specialList[43]': rel[1],
-                'specialList[44]': rel[2],
-                'specialList[45]': rel[3],
-                'specialList[46]': rel[4],
-                'specialList[47]': rel[5]
-              })
-              break;
+          var param = {};
+          for(let i=0; i<6 ; i++){
+            var string = "specialList[" + `${length++}` + "]"
+            param[string] = rel[i];
           }
+          this.setData(param) 
         }
 
       }
@@ -214,78 +148,12 @@ Page(util._obj({
   //         console.log(rel)
   //         console.log(rel[0].sku[0])
   //         console.log(length)
-  //         switch(length){
-  //           case 6 :
-  //             this.setData({
-  //               'specialList[6]': rel[0],
-  //               'specialList[7]': rel[1],
-  //               'specialList[8]': rel[2],
-  //               'specialList[9]': rel[3],
-  //               'specialList[10]': rel[4],
-  //               'specialList[11]': rel[5]
-  //             })
-  //             break;
-  //           case 12:
-  //             this.setData({
-  //               'specialList[12]': rel[0],
-  //               'specialList[13]': rel[1],
-  //               'specialList[14]': rel[2],
-  //               'specialList[15]': rel[3],
-  //               'specialList[16]': rel[4],
-  //               'specialList[17]': rel[5]
-  //             })
-  //             break;
-  //           case 18:
-  //             this.setData({
-  //               'specialList[18]': rel[0],
-  //               'specialList[19]': rel[1],
-  //               'specialList[20]': rel[2],
-  //               'specialList[21]': rel[3],
-  //               'specialList[22]': rel[4],
-  //               'specialList[23]': rel[5]
-  //             })
-  //             break;
-  //           case 24:
-  //             this.setData({
-  //               'specialList[24]': rel[0],
-  //               'specialList[25]': rel[1],
-  //               'specialList[26]': rel[2],
-  //               'specialList[27]': rel[3],
-  //               'specialList[28]': rel[4],
-  //               'specialList[29]': rel[5]
-  //             })
-  //             break;
-  //           case 30:
-  //             this.setData({
-  //               'specialList[30]': rel[0],
-  //               'specialList[31]': rel[1],
-  //               'specialList[32]': rel[2],
-  //               'specialList[33]': rel[3],
-  //               'specialList[34]': rel[4],
-  //               'specialList[35]': rel[5]
-  //             })
-  //             break;
-  //           case 36:
-  //             this.setData({
-  //               'specialList[36]': rel[0],
-  //               'specialList[37]': rel[1],
-  //               'specialList[38]': rel[2],
-  //               'specialList[39]': rel[3],
-  //               'specialList[40]': rel[4],
-  //               'specialList[41]': rel[5]
-  //             })
-  //             break;
-  //           case 42:
-  //             this.setData({
-  //               'specialList[42]': rel[0],
-  //               'specialList[43]': rel[1],
-  //               'specialList[44]': rel[2],
-  //               'specialList[45]': rel[3],
-  //               'specialList[46]': rel[4],
-  //               'specialList[47]': rel[5]
-  //             })
-  //             break;
-  //         }
+  //         var param = {};
+  //        for(let i=0; i<6 ; i++){
+  //          var string = "specialList[" + `${length++}` + "]"
+  //          param[string] = rel[i];
+  //       }
+  //        this.setData(param) 
 
   //         // this.setData({
   //         //   'specialList[{{length}}] ': rel[1],
