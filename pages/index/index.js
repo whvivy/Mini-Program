@@ -154,17 +154,7 @@ Page(util._obj({
   //          param[string] = rel[i];
   //       }
   //        this.setData(param) 
-
-  //         // this.setData({
-  //         //   'specialList[{{length}}] ': rel[1],
-  //         //   'specialList[7]': rel[2],
-  //         //   'specialList[8]': rel[3],
-  //         //   'specialList[9]': rel[4],
-  //         //   'specialList[10]': rel[5],
-  //         //   'specialList[11]': rel[6]
-  //         // })
-  //       }
-        
+  //       }      
   //     }
   //   })
   //   p++;
