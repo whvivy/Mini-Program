@@ -16,7 +16,7 @@ Page(util._obj({
   },
   //事件处理函数 n
   onLoad: function () {
-    console.log(wx._.indexOf([1, 2, 3], 2))
+    //console.log(wx._.indexOf([1, 2, 3], 2))
     var that = this
     wx.request({
       url: 'https://api.ilovelook.cn/api/kolshop/gogoboi/coms/list?code=gogoboi',
